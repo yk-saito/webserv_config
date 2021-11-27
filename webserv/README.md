@@ -12,6 +12,11 @@ Run the image.
 docker run -d -p 8080:80 --name webserv webserv_image
 ```
 
+Execute bash in webserv container.
+```
+docker exec -it webserv bash
+```
+
 ### Access the page
 For example
 - http://localhost:8080
