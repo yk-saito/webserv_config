@@ -3,10 +3,14 @@
 ## How to use
 ### Build and run
 Build a docker image.
-``docker build -t webserv_image .``
+```
+docker build -t webserv_image .
+```
 
 Run the image.
-``docker run -d -p 8080:80 --name webserv webserv_image``
+```
+docker run -d -p 8080:80 --name webserv webserv_image
+```
 
 ### Access the page
 For example
