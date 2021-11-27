@@ -1,4 +1,4 @@
-# 課題Webserv - config 挙動確認用Docker container
+# A container for  checking the operation of  webserv-config file
 
 ## How to use
 ### Build and run
