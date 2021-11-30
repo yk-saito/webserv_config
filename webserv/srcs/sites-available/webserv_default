@@ -13,6 +13,12 @@ server {
 	server_name webserv1;
 
 	root /html/webserv1/;
+
+	location / {
+		limit_except GET POST DELETE {
+			deny  all;
+		}
+	}
 }
 
 server {
