@@ -6,7 +6,7 @@
 #    By: ysaito <ysaito@student.42tokyo.jp>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/27 21:17:56 by ysaito            #+#    #+#              #
-#    Updated: 2021/11/30 19:52:28 by ysaito           ###   ########.fr        #
+#    Updated: 2021/12/01 19:18:07 by ysaito           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,10 +24,3 @@ RUN     unlink /etc/nginx/sites-enabled/default \
         && ln -s /etc/nginx/sites-available/webserv_default /etc/nginx/sites-enabled/webserv_default
 
 CMD     ["/usr/sbin/nginx", "-g", "daemon off;"]
-
-POST /test HTTP/1.1
-Host: example.com
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 27
-
-field1=value1&field2=value2

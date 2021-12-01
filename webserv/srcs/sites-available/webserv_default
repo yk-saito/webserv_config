@@ -1,4 +1,6 @@
 
+allow_methods GET POST DELETE;
+
 client_max_body_size 1000;
 
 error_page 404 /404.html;
@@ -15,9 +17,14 @@ server {
 	root /html/webserv1/;
 
 	location / {
-		limit_except GET POST DELETE {
-			deny  all;
-		}
+	}
+
+	location /dir1 {
+		autoindex on;
+	}
+
+	location /dir2 {
+		autoindex off;
 	}
 }
 
@@ -30,4 +37,7 @@ server {
 	server_name webserv2;
 
 	root /html/webserv2/;
+
+	location / {
+	}
 }
