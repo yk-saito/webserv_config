@@ -1,3 +1,10 @@
+server {
+	listen 80;
+	listen [::]:80;
+
+	server_name old;
+	return 		301 http://new$request_uri;
+}
 
 server {
 	listen 80 default_server;
@@ -11,6 +18,28 @@ server {
 	server_name _;
 
 	root /var/www/html/nginx1;
+
+	# HTTP redirect
+	## 301 Moved Permanently
+	location /old.html {
+		return 301 http://$host/new.html;
+	}
+
+	## 302
+	location /302 {
+		return 302 http://$host/maintenance.html;
+	}
+
+	## 303
+	location /303 {
+		return 303 http://$host/index.html;
+	}
+
+	## 307
+	location /307 {
+		return 307 http://$host/index.html;
+	}
+
 
 	location / {
 		try_files $uri $uri/ =404;

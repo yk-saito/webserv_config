@@ -1,0 +1,45 @@
+<HTML>
+	<HEAD>
+	<META HTTP-EQuiv="Content-Type" Content="text/html; charset=Shift_JIS">
+	<TITLE>CGI Sample</TITLE>
+	</HEAD>
+
+	<BODY BGCOLOR=#FFFFFF TEXT=#000000>
+
+	<CENTER>
+	  <FONT SIZE=+2> <I><B><FONT COLOR=#007744>CGI Sample</FONT></b></I></FONT>
+	<BR>
+	<BR>
+	  <TABLE WIDTH=80%%>
+		<TR>
+		  <TD COLSPAN=2>
+			<FORM METHOD="post" ACTION="/usr/lib/cgi-bin/form.cgi">
+			  <p><FONT COLOR=#0000BB>Name：</FONT>
+				<INPUT TYPE="text" NAME="UserName">
+				<BR>
+			  </p>
+			  <p> <font color="#0000BB">性別</font>：
+				<input type="checkbox" name="Gender" value="male">
+				男 　　　　
+				<input type="checkbox" name="Gender" value="female">
+				女</p>
+			  <p><FONT COLOR=#0000BB>Memo：</FONT><BR>
+				<TEXTAREA NAME="Contents" ROWS=10 COLS=50></TEXTAREA>
+				<BR>
+			  </p>
+			  <CENTER>
+				<INPUT TYPE="submit" VALUE="Redigter">
+				<INPUT TYPE="reset" VALUE="clear">
+			  </CENTER>
+			</FORM>
+		  </TD>
+		</TR>
+	  </TABLE>
+	</CENTER>
+
+	<P>
+	<CENTER>
+	</CENTER>
+
+	</BODY>
+	</HTML>
